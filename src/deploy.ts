@@ -3,8 +3,11 @@ import { REST, Routes } from "discord.js";
 import ping from "./commands/ping";
 import say from "./commands/say";
 import userinfo from "./commands/userinfo";
+import serverinfo from "./commands/serverinfo";
 
-const commands = [ping.data, say.data, userinfo.data].map((cmd) => cmd.toJSON());
+const commands = [ping.data, say.data, userinfo.data, serverinfo.data].map(
+	(cmd) => cmd.toJSON(),
+);
 
 const rest = new REST({ version: "10" }).setToken(process.env.BOT_TOKEN!);
 
